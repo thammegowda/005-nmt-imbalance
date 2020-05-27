@@ -1,0 +1,6 @@
+*.*
+!*.yml
+!*.sh
+data
+# this is link
+!*/data
