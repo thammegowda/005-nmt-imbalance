@@ -1,6 +1,8 @@
 *.*
 !*.yml
 !*.sh
+!*.5k*
 data
 # this is link
 !*/data
+R-*

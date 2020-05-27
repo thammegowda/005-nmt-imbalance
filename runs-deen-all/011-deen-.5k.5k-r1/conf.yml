@@ -1,0 +1,81 @@
+model_args: # model construction args
+  src_vocab: 500
+  tgt_vocab: 500
+  enc_layers: 6
+  dec_layers: 6
+  hid_size: 512
+  ff_size: 2048
+  n_heads: 8
+  attn_bias: true
+  attn_dropout: 0.1
+  dropout: 0.1
+  activation: gelu
+  tied_emb: one-way
+model_type: tfmnmt
+optim:
+  name: ADAM
+  args:
+    betas:
+    - 0.9
+    - 0.998
+    eps: 1.0e-09
+    lr: 0.2
+    warmup_steps: 16000
+    label_smoothing: 0.1
+    constant: 2
+    criterion: smooth_kld
+    amsgrad: false
+    weight_decay: 0
+    inv_sqrt: false
+prep: # data preparation
+  codec_lib: nlcodec
+  char_coverage: 0.9995
+  max_src_types: 500
+  max_tgt_types: 500
+  #max_types: 32000
+  pieces: bpe   # choices: bpe, char, word, unigram  from google/sentencepiece
+  shared_vocab: false  # true means same vocab for src and tgt, false means different vocabs
+  src_len: 512   # longer sentences, decision is made as per 'truncate={true,false}'
+  tgt_len: 512
+  train_src: data/train.all.deu.tok
+  train_tgt: data/train.all.eng.tok
+  truncate: true   # what to do with longer sentences: if true truncate at src_len or tgt_len; if false filter away
+  valid_src: data/tests/newstest2018_ende.deu.tok
+  valid_tgt: data/tests/newstest2018_ende.eng.tok
+tester:
+  decoder:
+    beam_size: 4
+    batch_size: 18000
+    lp_alpha: 0.6
+    ensemble: 10
+    max_len: 50
+  suit:  # suit of tests to run after the training
+    newstest2018:
+    - data/tests/newstest2018_ende.deu.tok
+    - data/tests/newstest2018_ende.eng
+    newstest2019:
+    - data/tests/newstest2019_ende.deu.tok
+    - data/tests/newstest2019_ende.eng
+    newstest2014:
+    - data/tests/newstest2014_deen.deu.tok
+    - data/tests/newstest2014_deen.eng
+  # in case we want to use external de tokenizer. interface:: $detokenizer < $out > out.entok
+  # by default it uses moses-tokenizer python wrapper to perl script
+  detokenizer: cut -f1 | sed 's/<unk>//g' | sacremoses -l en detokenize
+trainer:
+  init_args:
+    chunk_size: 100  # generation in chunks of time steps to reduce memory consumption
+  batch_size: 24000   # not exceeding these many tokens (including paddings). in tensor2tensor it is mean batch size
+  check_point: 1000  # how often to checkpoint?
+  keep_models: 10   # how many checkpoints to keep on disk (small enough to save disk, large enough for checkpt averaging
+  steps: 200000   # how many steps to train
+  keep_in_mem: true
+  early_stop:
+    patience: 10
+    signi_round: 3
+    by: loss
+    min_steps: 16000
+
+updated_at: '2020-05-25T10:20:49.390092'
+seed: 12345
+
