@@ -1,6 +1,6 @@
 model_args: # model construction args
   src_vocab: 92
-  tgt_vocab: 182
+  tgt_vocab: 181
   enc_layers: 6
   dec_layers: 6
   hid_size: 512
@@ -74,6 +74,6 @@ trainer:
     by: loss
     min_steps: 16000
 
-updated_at: '2020-05-25T13:32:17.164835'
+updated_at: '2020-05-27T21:03:31.264871'
 seed: 12345
 
