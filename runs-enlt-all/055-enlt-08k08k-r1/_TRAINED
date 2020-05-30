@@ -1,0 +1,7 @@
+steps: 200000
+early_stopped: true
+finetune: false
+earlier:
+  steps: 200000
+  early_stopped: true
+  finetune: false

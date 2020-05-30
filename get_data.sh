@@ -13,11 +13,11 @@
 
 set -e
 
-source ~/.bashrc
+#source ~/.bashrc
 #conda deactivate
 #conda activate fairseq
 
-ROOT=~/work/papers/nmt-imbalance/rtg-runs/
+ROOT=$PWD
 DATA=$ROOT/data
 
 log() { printf "$(date --rfc-3339 s): $1\n"; }
@@ -27,7 +27,7 @@ N_CPU=20
 
 # check requirements
 # pip install nlcodec mtdata  mtdata==0.2.3
-for lib in nlcodec mtdata sacremoses awkg; do
+for lib in  mtdata sacremoses awkg; do
     which $lib > /dev/null || exit_log 1 "$lib required but not found"
 done
  python -m indicnlp.tokenize.indic_tokenize <(echo test) /dev/null hi || exit_log 1 'pip install indic-nlp-library' 
@@ -152,4 +152,48 @@ hien=$DATA/hin-eng
     done
  
     touch $hien/_DOWNd 
+}
+
+
+
+#mtdat get -l lt-en -tr europarl_v10 wiki_titles_v1 paracrawl_v6 EESC2017 EMA2016 airbaltic ecb2017 rapid2016 -ts newsdev2019_lten newstest2019_lten
+lten=$DATA/lit-eng
+
+[[ -f $lten/_DOWNd ]] && log "Skip hin-eng; rm $lten/_DOWNd to force" || {
+    [[ -f $lten/mtdata.signature.txt ]] \
+	|| mtdata get -l lit-eng \
+	-tr europarl_v10 \
+	-ts newsdev2019_lten newstest2019_lten  \
+	-o $lten --merge \
+	|| exit_log $1 "lit-eng download failed"
+
+    # remove hin_eng from test names; to simplify
+    for i in $lten/tests/*-lit_eng*; do 
+	[[ -f $i ]] && mv $i ${i/-lit_eng/}
+    done
+    # move these as orig, make place for cleaned
+    [[ -f $lten/train.eng ]] && mv $lten/train.eng{,.orig}
+    [[ -f $lten/train.lit ]] && mv $lten/train.lit{,.orig}
+    
+    printf "lt lit\nen eng\n" | while read iso2 lang; do
+	for f in $lten/train.$lang.orig $lten/tests/*.$lang; do
+	    [[ -f $f.tok  && "$(wc -l < $f)" -eq "$(wc -l < $f.tok)" ]] && continue
+	    log "tokenize: $f -> $f.tok"
+	    sacremoses -l $iso2 -j $N_CPU tokenize -x < $f > $f.tok || exit_log 1 "tokenization fail"
+	done
+    done
+
+    [[ -f $lten/train.lit-eng.cln.tok ]] || paste $lten/train.{lit,eng}.orig.tok | clean_parallel  > $lten/train.lit-eng.cln.tok
+    cut -f1 $lten/train.lit-eng.cln.tok > $lten/train.all.lit.tok
+    cut -f2 $lten/train.lit-eng.cln.tok > $lten/train.all.eng.tok
+
+    log "shuffling and preparing subsets"
+    cat $lten/train.lit-eng.cln.tok | shuf --random-source=$lten/train.eng.orig > $lten/train-shuf.all.lit-eng.tok
+
+    printf "030k 30000\n500k 500000\n001m 1000000\n" | while read name size; do
+	cut -f1 $lten/train-shuf.all.lit-eng.tok | head -$size > $lten/train.$name.lit.tok
+	cut -f2 $lten/train-shuf.all.lit-eng.tok | head -$size > $lten/train.$name.eng.tok
+    done
+ 
+    touch $lten/_DOWNd 
 }
