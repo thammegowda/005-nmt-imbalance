@@ -1,0 +1,114 @@
+Reporting BLEU sacre_bleu
+Experiment/BLEU	newstest2014	newstest2018	newstest2019
+runs-ende-001m/000-ende-chars-r1/test_step200000_beam4_ens10_lp0.6	20.2	31.8	28.2
+runs-ende-001m/011-ende-.5k.5k-r1/test_step200000_beam4_ens10_lp0.6	22.1	35.2	31.1
+runs-ende-001m/022-ende-01k01k-r1/test_step200000_beam4_ens10_lp0.6	22.5	36.3	32.2
+runs-ende-001m/033-ende-02k02k-r1/test_step200000_beam4_ens10_lp0.6	22.7	36.9	32.7
+runs-ende-001m/044-ende-04k04k-r1/test_step200000_beam4_ens10_lp0.6	23.1	36.7	32.9
+runs-ende-001m/055-ende-08k08k-r1/test_step188000_beam4_ens10_lp0.6	23.3	37.0	33.0
+runs-ende-001m/066-ende-16k16k-r1/test_step125000_beam4_ens10_lp0.6	23.3	36.8	32.8
+runs-ende-001m/077-ende-32k32k-r1/test_step149000_beam4_ens10_lp0.6	22.9	36.1	32.5
+runs-ende-001m/088-ende-48k48k-r1/test_step114000_beam4_ens10_lp0.6	22.5	35.7	32.0
+runs-ende-001m/099-ende-64k64k-r1/test_step94000_beam4_ens10_lp0.6	22.5	35.1	31.4
+runs-ende-030k/000-ende-chars-r1/test_step42000_beam4_ens10_lp0.6	1.1	1.5	1.5
+runs-ende-030k/011-ende-.5k.5k-r1/test_step29000_beam4_ens10_lp0.6	5.0	6.9	6.3
+runs-ende-030k/022-ende-01k01k-r1/test_step25000_beam4_ens10_lp0.6	5.9	8.4	7.5
+runs-ende-030k/033-ende-02k02k-r1/test_step22000_beam4_ens10_lp0.6	6.3	9.2	8.2
+runs-ende-030k/044-ende-04k04k-r1/test_step19000_beam4_ens10_lp0.6	7.1	9.9	9.1
+runs-ende-030k/055-ende-08k08k-r1/test_step18000_beam4_ens10_lp0.6	7.2	10.1	9.3
+runs-ende-030k/066-ende-16k16k-r1/test_step17000_beam4_ens10_lp0.6	6.2	8.9	8.0
+runs-ende-030k/077-ende-32k32k-r1/test_step17000_beam4_ens10_lp0.6	5.2	7.4	6.7
+runs-ende-030k/088-ende-48k48k-r1/test_step17000_beam4_ens10_lp0.6	5.0	7.1	6.6
+runs-ende-030k/099-ende-64k64k-r1/test_step17000_beam4_ens10_lp0.6	5.2	7.6	6.7
+runs-ende-500k/000-ende-chars-r1/test_step200000_beam4_ens10_lp0.6	19.6	31.0	26.8
+runs-ende-500k/011-ende-.5k.5k-r1/test_step200000_beam4_ens10_lp0.6	21.4	33.8	29.4
+runs-ende-500k/022-ende-01k01k-r1/test_step200000_beam4_ens10_lp0.6	21.6	33.9	30.0
+runs-ende-500k/033-ende-02k02k-r1/test_step127000_beam4_ens10_lp0.6	21.4	33.9	30.4
+runs-ende-500k/044-ende-04k04k-r1/test_step122000_beam4_ens10_lp0.6	21.5	34.4	30.2
+runs-ende-500k/055-ende-08k08k-r1/test_step140000_beam4_ens10_lp0.6	21.5	33.8	30.2
+runs-ende-500k/066-ende-16k16k-r1/test_step101000_beam4_ens10_lp0.6	21.2	33.4	29.3
+runs-ende-500k/077-ende-32k32k-r1/test_step79000_beam4_ens10_lp0.6	20.9	32.6	29.4
+runs-ende-500k/088-ende-48k48k-r1/test_step55000_beam4_ens10_lp0.6	20.5	31.9	29.0
+runs-ende-500k/099-ende-64k64k-r1/test_step46000_beam4_ens10_lp0.6	20.4	31.5	28.3
+runs-ende-all/000-ende-chars-r1/test_step200000_beam4_ens10_lp0.6	20.5	32.0	28.2
+runs-ende-all/011-ende-.5k.5k-r1/test_step200000_beam4_ens10_lp0.6	22.4	36.2	32.3
+runs-ende-all/022-ende-01k01k-r1/test_step200000_beam4_ens10_lp0.6	23.2	37.4	33.3
+runs-ende-all/033-ende-02k02k-r1/test_step200000_beam4_ens10_lp0.6	23.6	38.2	33.9
+runs-ende-all/044-ende-04k04k-r1/test_step200000_beam4_ens10_lp0.6	24.1	38.7	34.4
+runs-ende-all/055-ende-08k08k-r1/test_step200000_beam4_ens10_lp0.6	24.5	39.1	35.1
+runs-ende-all/066-ende-16k16k-r1/test_step200000_beam4_ens10_lp0.6	24.6	39.6	35.9
+runs-ende-all/077-ende-32k32k-r1/test_step200000_beam4_ens10_lp0.6	25.0	40.1	36.8
+runs-ende-all/088-ende-48k48k-r1/test_step200000_beam4_ens10_lp0.6	25.5	40.4	36.9
+runs-ende-all/099-ende-64k64k-r1/test_step200000_beam4_ens10_lp0.6	25.4	40.3	36.5
+runs-deen-001m/000-deen-chars-r1/test_step200000_beam4_ens10_lp0.6	25.4	33.8	31.0
+runs-deen-001m/011-deen-.5k.5k-r1/test_step183000_beam4_ens10_lp0.6	26.4	35.4	32.2
+runs-deen-001m/022-deen-01k01k-r1/test_step200000_beam4_ens10_lp0.6	27.1	35.9	32.8
+runs-deen-001m/033-deen-02k02k-r1/test_step156000_beam4_ens10_lp0.6	27.1	35.6	33.0
+runs-deen-001m/044-deen-04k04k-r1/test_step136000_beam4_ens10_lp0.6	27.2	36.0	33.5
+runs-deen-001m/055-deen-08k08k-r1/test_step173000_beam4_ens10_lp0.6	27.1	36.0	33.6
+runs-deen-001m/066-deen-16k16k-r1/test_step144000_beam4_ens10_lp0.6	27.0	35.5	33.0
+runs-deen-001m/077-deen-32k32k-r1/test_step79000_beam4_ens10_lp0.6	27.0	36.0	33.0
+runs-deen-001m/088-deen-48k48k-r1/test_step59000_beam4_ens10_lp0.6	26.7	35.0	32.2
+runs-deen-001m/099-deen-64k64k-r1/test_step51000_beam4_ens10_lp0.6	26.6	34.9	32.7
+runs-deen-030k/000-deen-chars-r1/test_step66000_beam4_ens10_lp0.6	10.7	14.4	13.6
+runs-deen-030k/011-deen-.5k.5k-r1/test_step47000_beam4_ens10_lp0.6	10.2	13.3	12.9
+runs-deen-030k/022-deen-01k01k-r1/test_step42000_beam4_ens10_lp0.6	12.5	17.1	16.2
+runs-deen-030k/033-deen-02k02k-r1/test_step42000_beam4_ens10_lp0.6	12.6	16.5	15.7
+runs-deen-030k/044-deen-04k04k-r1/test_step35000_beam4_ens10_lp0.6	12.5	16.4	15.5
+runs-deen-030k/055-deen-08k08k-r1/test_step34000_beam4_ens10_lp0.6	11.5	14.9	14.2
+runs-deen-030k/066-deen-16k16k-r1/test_step21000_beam4_ens10_lp0.6	9.4	12.3	11.3
+runs-deen-030k/077-deen-32k32k-r1/test_step20000_beam4_ens10_lp0.6	8.8	11.3	10.9
+runs-deen-030k/088-deen-48k48k-r1/test_*	NA-Hyp	NA-Hyp	NA-Hyp
+runs-deen-030k/099-deen-64k64k-r1/test_*	NA-Hyp	NA-Hyp	NA-Hyp
+runs-deen-500k/000-deen-chars-r1/test_step200000_beam4_ens10_lp0.6	24.0	32.1	29.7
+runs-deen-500k/011-deen-.5k.5k-r1/test_step144000_beam4_ens10_lp0.6	24.8	33.4	30.4
+runs-deen-500k/022-deen-01k01k-r1/test_step120000_beam4_ens10_lp0.6	25.2	33.5	31.0
+runs-deen-500k/033-deen-02k02k-r1/test_step161000_beam4_ens10_lp0.6	25.1	33.9	30.8
+runs-deen-500k/044-deen-04k04k-r1/test_step167000_beam4_ens10_lp0.6	25.3	33.7	31.1
+runs-deen-500k/055-deen-08k08k-r1/test_step130000_beam4_ens10_lp0.6	25.1	33.6	31.1
+runs-deen-500k/066-deen-16k16k-r1/test_step77000_beam4_ens10_lp0.6	25.2	33.9	31.1
+runs-deen-500k/077-deen-32k32k-r1/test_step70000_beam4_ens10_lp0.6	24.4	32.6	30.3
+runs-deen-500k/088-deen-48k48k-r1/test_step53000_beam4_ens10_lp0.6	24.2	31.8	30.0
+runs-deen-500k/099-deen-64k64k-r1/test_step46000_beam4_ens10_lp0.6	23.6	31.5	29.3
+runs-deen-all/000-deen-chars-r1/test_step200000_beam4_ens10_lp0.6	25.8	34.3	31.2
+runs-deen-all/011-deen-.5k.5k-r1/test_step200000_beam4_ens10_lp0.6	28.1	37.0	33.4
+runs-deen-all/022-deen-01k01k-r1/test_step200000_beam4_ens10_lp0.6	28.6	37.8	33.7
+runs-deen-all/033-deen-02k02k-r1/test_step200000_beam4_ens10_lp0.6	28.7	38.0	33.9
+runs-deen-all/044-deen-04k04k-r1/test_step200000_beam4_ens10_lp0.6	29.4	38.4	34.9
+runs-deen-all/055-deen-08k08k-r1/test_step200000_beam4_ens10_lp0.6	29.7	38.5	35.1
+runs-deen-all/066-deen-16k16k-r1/test_step200000_beam4_ens10_lp0.6	29.8	39.0	35.6
+runs-deen-all/077-deen-32k32k-r1/test_step200000_beam4_ens10_lp0.6	30.2	39.2	35.9
+runs-deen-all/088-deen-48k48k-r1/test_step175000_beam4_ens10_lp0.6	30.0	39.1	36.2
+runs-deen-all/099-deen-64k64k-r1/test_step185000_beam4_ens10_lp0.6	30.3	39.2	36.2
+Reporting BLEU sacre_bleu
+Experiment/BLEU	IITBv1_5_dev	IITBv1_5_test
+runs-enhi-030k/000-enhi-chars-r1/test_step29000_beam4_ens10_lp0.6	0.4	0.7
+runs-enhi-030k/011-enhi-.5k.5k-r1/test_step17000_beam4_ens10_lp0.6	1.1	1.5
+runs-enhi-030k/022-enhi-01k01k-r1/test_step17000_beam4_ens10_lp0.6	1.4	1.5
+runs-enhi-030k/033-enhi-02k02k-r1/test_step16000_beam4_ens10_lp0.6	1.3	1.8
+runs-enhi-030k/044-enhi-04k04k-r1/test_step16000_beam4_ens10_lp0.6	1.8	1.9
+runs-enhi-030k/055-enhi-08k08k-r1/test_step16000_beam4_ens10_lp0.6	1.9	2.1
+runs-enhi-030k/066-enhi-16k16k-r1/test_step16000_beam4_ens10_lp0.6	1.9	2.0
+runs-enhi-030k/077-enhi-32k32k-r1/test_step16000_beam4_ens10_lp0.6	2.1	1.9
+runs-enhi-030k/088-enhi-48k48k-r1/test_step16000_beam4_ens10_lp0.6	1.9	2.0
+runs-enhi-030k/099-enhi-64k64k-r1/test_step16000_beam4_ens10_lp0.6	1.9	2.0
+runs-enhi-500k/000-enhi-chars-r1/test_step119000_beam4_ens10_lp0.6	15.8	15.4
+runs-enhi-500k/011-enhi-.5k.5k-r1/test_step87000_beam4_ens10_lp0.6	15.8	15.8
+runs-enhi-500k/022-enhi-01k01k-r1/test_step66000_beam4_ens10_lp0.6	16.3	15.6
+runs-enhi-500k/033-enhi-02k02k-r1/test_step60000_beam4_ens10_lp0.6	16.1	15.7
+runs-enhi-500k/044-enhi-04k04k-r1/test_step59000_beam4_ens10_lp0.6	15.6	15.7
+runs-enhi-500k/055-enhi-08k08k-r1/test_step36000_beam4_ens10_lp0.6	15.3	15.7
+runs-enhi-500k/066-enhi-16k16k-r1/test_step38000_beam4_ens10_lp0.6	15.5	15.4
+runs-enhi-500k/077-enhi-32k32k-r1/test_step31000_beam4_ens10_lp0.6	14.1	14.5
+runs-enhi-500k/088-enhi-48k48k-r1/test_step29000_beam4_ens10_lp0.6	13.4	13.9
+runs-enhi-500k/099-enhi-64k64k-r1/test_step27000_beam4_ens10_lp0.6	13.2	13.8
+runs-enhi-all/000-enhi-chars-r1/test_step200000_beam4_ens10_lp0.6	16.2	16.8
+runs-enhi-all/011-enhi-.5k.5k-r1/test_step168000_beam4_ens10_lp0.6	17.8	17.5
+runs-enhi-all/022-enhi-01k01k-r1/test_step85000_beam4_ens10_lp0.6	17.3	17.2
+runs-enhi-all/033-enhi-02k02k-r1/test_step200000_beam4_ens10_lp0.6	18.4	18.0
+runs-enhi-all/044-enhi-04k04k-r1/test_step163000_beam4_ens10_lp0.6	17.8	17.9
+runs-enhi-all/055-enhi-08k08k-r1/test_step96000_beam4_ens10_lp0.6	17.3	18.1
+runs-enhi-all/066-enhi-16k16k-r1/test_step87000_beam4_ens10_lp0.6	17.0	17.7
+runs-enhi-all/077-enhi-32k32k-r1/test_step62000_beam4_ens10_lp0.6	16.8	17.3
+runs-enhi-all/088-enhi-48k48k-r1/test_step55000_beam4_ens10_lp0.6	16.3	16.9
+runs-enhi-all/099-enhi-64k64k-r1/test_step46000_beam4_ens10_lp0.6	16.3	16.7
