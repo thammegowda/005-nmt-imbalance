@@ -26,7 +26,8 @@ exit_log() { log "$2";  exit $1; }
 N_CPU=20
 
 # check requirements
-# pip install nlcodec mtdata  mtdata==0.2.3
+# pip install nlcodec mtdata  mtdata==0.2.3 or newer
+# IITB hi-en dataset was added in 0.2.3 of mtdata but it wasnt released to Pypi; use 0.2.4
 for lib in  mtdata sacremoses awkg; do
     which $lib > /dev/null || exit_log 1 "$lib required but not found"
 done
