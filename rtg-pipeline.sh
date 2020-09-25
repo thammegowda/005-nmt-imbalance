@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-#SBATCH --partition=v100
+#SBATCH --partition=xxx
 ### SBATCH --mem=90g
 #SBATCH --time=1-12:00:00
 #SBATCH --nodes=1 --ntasks=1
@@ -23,14 +23,14 @@
 # If using compute grid, and dont rely on this relative path resolution, set the RTG_PATH here
 #RTG_PATH=/full/path/to/rtg-master
 RTG_PATH=~tgowda/repos/rtg
-#RTG_PATH=/nas/material/users/tg/work/projects/nmt-multilabel/rtg-175-multilabel
+
 
 # Use tmp dir
 #export RTG_TMP=$TMPDIR
 export RTG_TMP=$SCRATCH/tmp
 # restrict threads / cpus
 
-export RTG_CPUS=120     #$SLURM_CPUS_ON_NODE
+export RTG_CPUS=8     #$SLURM_CPUS_ON_NODE
 export OMP_NUM_THREADS=$RTG_CPUS
 export MKL_NUM_THREADS=$RTG_CPUS
 
