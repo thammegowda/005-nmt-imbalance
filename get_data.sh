@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#SBATCH --partition=v100
-#SBATCH --mem=64G
+#SBATCH --partition=xxx
+#SBATCH --mem=20G
 #SBATCH --time=0-10:00:00
 #SBATCH --nodes=1 --ntasks=1
 #SBATCH --cpus-per-task=20
