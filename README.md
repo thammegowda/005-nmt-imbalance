@@ -43,11 +43,16 @@ Please adapt `#SBATCH` to your cluster.
 
 
 # Citation: 
-TODO: get full citation as bibtex
+TODO: get full citation fromm EMNLP
 ```
-Finding the Optimal Vocabulary for Neural Machine Translation 
-Thamme Gowda, and Jonathan May
-Findings of EMNLP 2020
+@misc{gowda2020nmt-vocab,
+      title={Finding the Optimal Vocabulary Size for Neural Machine Translation}, 
+      author={Thamme Gowda and Jonathan May},
+      year={2020},
+      eprint={2004.02334},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 
