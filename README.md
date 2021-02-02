@@ -43,16 +43,21 @@ Please adapt `#SBATCH` to your cluster.
 
 
 # Citation: 
-TODO: get full citation fromm EMNLP
 ```
-@misc{gowda2020nmt-vocab,
-      title={Finding the Optimal Vocabulary Size for Neural Machine Translation}, 
-      author={Thamme Gowda and Jonathan May},
-      year={2020},
-      eprint={2004.02334},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{gowda-may-2020-finding,
+    title = "Finding the Optimal Vocabulary Size for Neural Machine Translation",
+    author = "Gowda, Thamme  and
+      May, Jonathan",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.findings-emnlp.352",
+    doi = "10.18653/v1/2020.findings-emnlp.352",
+    pages = "3955--3964",
 }
+
 ```
 
 
