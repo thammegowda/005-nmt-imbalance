@@ -1,8 +1,7 @@
 
 # NMT Imbalance
 
-This repository contains tools to reproduce the experiments reported in "Finding the optimal vocabulary for Neural Machine Translation" (**yet to appear at EMNLP 2020**)
-
+This repository contains tools to reproduce the experiments reported in "Finding the optimal vocabulary for Neural Machine Translation" https://aclanthology.org/2020.findings-emnlp.352
 
 # Tools :
 - `pip install rtg==0.4.2` : https://pypi.org/project/rtg/#history   
@@ -43,6 +42,9 @@ Please adapt `#SBATCH` to your cluster.
 
 
 # Citation: 
+
+https://aclanthology.org/2020.findings-emnlp.352
+
 ```
 @inproceedings{gowda-may-2020-finding,
     title = "Finding the Optimal Vocabulary Size for Neural Machine Translation",
